@@ -1,0 +1,46 @@
+
+body{
+    background-image: url('../images/soccer-ronaldo.jpg');
+    background-size: 100%;
+    color: white;
+
+}
+
+h2{
+    text-align: initial;
+    font-weight: bold;
+}
+
+.say{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    font-weight: bold;
+}
+
+p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.signup{
+    margin: 20px;
+    text-align: center;
+}
+
+.signupBtn{
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+    background-color:rebeccapurple;
+}
+
+.viewButton{
+font-size: 25px;
+margin-left: 100px;
+padding: 5px;
+background-color:rebeccapurple;
+}

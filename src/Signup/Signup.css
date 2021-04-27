@@ -1,0 +1,13 @@
+
+.sign{
+    display: flex;
+    justify-content: center;
+}
+
+.forma{
+    font-size: 25px;
+}
+.button{
+    background-color: rebeccapurple;
+    font-size: 20px;
+}

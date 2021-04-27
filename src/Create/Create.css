@@ -1,0 +1,17 @@
+
+
+.create{
+    display: flex;
+    justify-content: center;
+}
+
+.build{
+    align-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.submit{
+    font-size: 20px;
+    background-color: rebeccapurple;
+}

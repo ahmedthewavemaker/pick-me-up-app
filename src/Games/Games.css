@@ -1,0 +1,15 @@
+
+*{
+    box-sizing: border-box;
+}
+
+.gameview{
+    display: flex;
+    flex-direction: row;
+}
+
+.gametime{
+ background-color: rgba(0, 0, 0, 0.8);
+ margin: auto;
+ padding: 15px;
+}
