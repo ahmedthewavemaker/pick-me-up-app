@@ -4,6 +4,7 @@ import Landing from './Landing/Landing'
 import Signup from './Signup/Signup'
 import Create from './Create/Create'
 import Games from './Games/Games'
+import Login from './Login/Login'
 import './App.css'
 
 
@@ -30,6 +31,11 @@ function App() {
       <Route
         path = "/games"
         component={Games}
+      />
+
+      <Route
+        path = "/login"
+        component={Login}
       />
 
     </main>

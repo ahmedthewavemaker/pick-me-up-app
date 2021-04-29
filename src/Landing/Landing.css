@@ -38,6 +38,13 @@ p{
     background-color:rebeccapurple;
 }
 
+.loginBtn{
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+    background-color:rebeccapurple;
+}
+
 .viewButton{
 font-size: 25px;
 margin-left: 100px;

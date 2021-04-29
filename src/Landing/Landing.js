@@ -20,9 +20,10 @@ function Landing() {
         <button className='viewButton'><Link to='/Games'> View Games Now! </Link> </button>
 
         <div className= 'signup'>
-        <h2 className = 'signup'>Sign up now to create your own game!</h2>
+        <h2 className = 'signup'>Sign up now or Login to create your own game!</h2>
 
         <button className= 'signupBtn'><Link to='/signup'> Sign up </Link>  </button>
+        <button className= 'loginBtn'><Link to='/login'> Login </Link>  </button>
         </div>
 
     </div>
