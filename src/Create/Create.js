@@ -1,24 +1,58 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React, {useState} from 'react'
 import './Create.css'
+import GameApiService from '../services/games-service'
 
-function Create(){
+function Create(props){
+
+    const [error, setError] = useState(null)
+
+    const handleSubmit=(ev)=>{
+       ev.preventDefault()
+       setError(null)
+       const {name, maxplayers, location, date} = ev.target;
+
+       GameApiService.postGame({
+           name: name.value,
+           maxplayers: maxplayers.value,
+           location: location.value,
+           date: date.value
+        })
+
+        .then(game => {
+             name.value =''
+             maxplayers.value=''
+             location.value=''
+            date.value=''
+            props.history.push('/games')
+
+        })
+
+        .catch(res => {
+            console.log(res)
+            setError( res.error )
+          })
+
+
+
+    }
+
+
     return(
         <div className= 'create'>
-            <form className='build'>
-                <label classname='build' for='game'> Game name: </label>
-                <input type='text' name= 'game' id='game'/>
+            <form onSubmit={handleSubmit} className='build'>
+                <label className='build' htmlFor='name'> Game name: </label>
+                <input type='text' name= 'name' id='name'/>
                 <br/>
-                <label classname='build' for='maxplayers'> Max Players: </label>
+                <label className='build' htmlFor='maxplayers'> Max Players: </label>
                 <input type='number' name= 'maxplayers' id='maxplayers'/>
                 <br/>
-                <label classname='build' for='location'> Parks/Fields: </label>
+                <label className='build' htmlFor='location'> Parks/Fields: </label>
                 <input type='text' name= 'location' id='location'/>
                 <br/>
-                <label classname='build' for='date'> Date of Play: </label>
+                <label className='build' htmlFor='date'> Date of Play: </label>
                 <input type='text' name= 'date' id='date'/>
                 <br/>
-                <button className= 'submit'><Link to='/games'> Post </Link></button>
+                <button className= 'submit'> Post</button>
 
 
                 

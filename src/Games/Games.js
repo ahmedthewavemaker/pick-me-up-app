@@ -1,32 +1,60 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './Games.css'
+import config from '../config'
 
-function Games(){
+
+function Games(props){
+
+    const [error, setError] = useState(null)
+        const [games, setGames] = useState([])
+        useEffect( ()=> {
+            getGames()
+        }, [])
+
+     //3 functions of the requests (GET and DELETE)
+        const getGames =()=> {
+            return fetch(`${config.API_ENDPOINT}/games`)
+
+            .then(res => res.json())
+            .then(games => {
+                    setGames(games)
+
+              
+            })
+            .catch(res => {
+                console.log(res)
+                setError(error )
+              })
+        }
+
+const deleteGames =(id)=> {
+        fetch(`${config.API_ENDPOINT}/games/${id}`, {
+            method: 'DELETE',
+
+        })
+           
+            .then( games=> {
+                getGames()
+            })
+
+
+    }
+
     return(
-        <div className='gameview'>
-            <div className= 'gametime'>
-                <h3> Game 1</h3>
-                <p> Game name: UofR</p><br/>
-                <p> Max number: 20</p><br/>
-                <p> Location: Byrd Park field 3</p><br/>
-                <p> Date: 4:00 PM 4/30/2021</p><br/>
-                
-            </div >
-            <div  className= 'gametime'>
-            <h3> Game 2</h3>
-                <p> Game name: Red vs Blue</p><br/>
-                <p> Max number: 12</p><br/>
-                <p> Location: Greenwood field 1</p><br/>
-                <p> Date: 6:00 PM 5/1/2021</p><br/>
-
-            </div>
-            <div  className= 'gametime'>
-            <h3> Game 3</h3>
-                <p> Game name: International</p><br/>
-                <p> Max number: 22</p><br/>
-                <p> Location: Byrd Park field 2</p><br/>
-                <p> Date: 5:30 PM 4/30/2021</p><br/>
-            </div>
+        <div className='gameview' >
+            {games.map(game => (<div className= 'gametime' key={game}>
+                <h3 > {game.id}</h3>
+                <p> {game.name}</p><br/>
+                <p> {game.maxplayers}</p><br/>
+                <p> {game.location}</p><br/>
+                <p> {game.date}</p><br/>
+                <button onClick={e=> deleteGames(game.id)}> Delete </button>
+                 
+            </div >) )}
+            
+            
+           
+            
 
         </div>
     )
