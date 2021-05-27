@@ -37,6 +37,7 @@ function Signup(props) {
     return (
         <div className='sign'>
             <form onSubmit={handleSubmit} className='forma'>
+                {error}
                 <label htmlFor='user_name'> Username: </label>
                 <input placeholder='email@site.com' type='text' name='user_name' id='user_name' />
                 <br/>

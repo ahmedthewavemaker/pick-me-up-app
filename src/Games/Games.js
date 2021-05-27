@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './Games.css'
 import config from '../config'
+import moment from 'moment'
 
 
 function Games(props){
@@ -9,7 +10,7 @@ function Games(props){
         const [games, setGames] = useState([])
         useEffect( ()=> {
             getGames()
-        }, [])
+        }, [getGames])
 
      //3 functions of the requests (GET and DELETE)
         const getGames =()=> {
@@ -42,12 +43,12 @@ const deleteGames =(id)=> {
 
     return(
         <div className='gameview' >
-            {games.map(game => (<div className= 'gametime' key={game}>
+            {games.map(game => (<div className= 'gametime' key={`${game.id}`}>
                 <h3 > {game.id}</h3>
                 <p> {game.name}</p><br/>
-                <p> {game.maxplayers}</p><br/>
-                <p> {game.location}</p><br/>
-                <p> {game.date}</p><br/>
+                <p> Max players: {game.maxplayers}</p><br/>
+                <p> Location: {game.location}</p><br/>
+                <p> {moment(`${game.date}`).format('lll')}</p><br/>
                 <button onClick={e=> deleteGames(game.id)}> Delete </button>
                  
             </div >) )}

@@ -40,6 +40,7 @@ function Create(props){
     return(
         <div className= 'create'>
             <form onSubmit={handleSubmit} className='build'>
+                {error}
                 <label className='build' htmlFor='name'> Game name: </label>
                 <input type='text' name= 'name' id='name'/>
                 <br/>
