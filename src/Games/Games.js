@@ -1,61 +1,63 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './Games.css'
 import config from '../config'
 import moment from 'moment'
 
 
-function Games(props){
-
-    const [error, setError] = useState(null)
-        const [games, setGames] = useState([])
-        useEffect( ()=> {
-            getGames()
-        }, [getGames])
-
-     //3 functions of the requests (GET and DELETE)
-        const getGames =()=> {
-            return fetch(`${config.API_ENDPOINT}/games`)
+function Games() {
+    const getGames = () => {
+        return fetch(`${config.API_ENDPOINT}/games`)
 
             .then(res => res.json())
             .then(games => {
-                    setGames(games)
+                setGames(games)
 
-              
+
             })
             .catch(res => {
                 console.log(res)
-                setError(error )
-              })
-        }
+                setError(error)
+            })
+    }
+    const [error, setError] = useState(null)
+    const callback = useCallback(getGames, [error])
+    
+    const [games, setGames] = useState([])
+    useEffect(() => {
+       callback()
+    }, [callback])
 
-const deleteGames =(id)=> {
+    //3 functions of the requests (GET and DELETE)
+
+
+    const deleteGames = (id) => {
         fetch(`${config.API_ENDPOINT}/games/${id}`, {
             method: 'DELETE',
 
         })
-           
-            .then( games=> {
+
+            .then(games => {
                 getGames()
             })
 
 
     }
 
-    return(
+    return (
         <div className='gameview' >
-            {games.map(game => (<div className= 'gametime' key={`${game.id}`}>
+            {games.map(game => (<div className='gametime' key={`${game.id}`}>
                 <h3 > {game.id}</h3>
-                <p> {game.name}</p><br/>
-                <p> Max players: {game.maxplayers}</p><br/>
-                <p> Location: {game.location}</p><br/>
-                <p> {moment(`${game.date}`).format('lll')}</p><br/>
-                <button onClick={e=> deleteGames(game.id)}> Delete </button>
-                 
-            </div >) )}
-            
-            
-           
-            
+                <p> {game.name}</p><br />
+                <p> Max players: {game.maxplayers}</p><br />
+                <p> Location: {game.location}</p><br />
+                <p> {moment(`${game.date}`).format('lll')}</p><br />
+                <button onClick={e => deleteGames(game.id)}> Delete </button>
+
+            </div >))}
+
+
+
+
 
         </div>
     )
