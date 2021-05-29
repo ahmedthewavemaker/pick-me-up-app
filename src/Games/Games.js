@@ -46,12 +46,12 @@ function Games() {
     return (
         <div className='gameview' >
             {games.map(game => (<div className='gametime' key={`${game.id}`}>
-                <h3 > {game.id}</h3>
-                <p> {game.name}</p><br />
-                <p> Max players: {game.maxplayers}</p><br />
-                <p> Location: {game.location}</p><br />
-                <p> {moment(`${game.date}`).format('lll')}</p><br />
-                <button onClick={e => deleteGames(game.id)}> Delete </button>
+                <h3 className='fonty' > Id#: {game.id}</h3><br/>
+                <p className='fonty'> Game Name: {game.name}</p><br />
+                <p className='fonty'> Max players: {game.maxplayers}</p><br />
+                <p className='fonty'> Location: {game.location}</p><br />
+                <p className='fonty'> {moment(`${game.date}`).format('lll')}</p>
+                <button className='delBut' onClick={e => deleteGames(game.id)}> Delete </button>
 
             </div >))}
 

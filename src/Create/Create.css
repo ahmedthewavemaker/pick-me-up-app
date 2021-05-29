@@ -9,9 +9,17 @@
     align-content: center;
     align-items: center;
     text-align: left;
+    font-size: 25px;
+    font-family: Cambria;
 }
 
 .submit{
-    font-size: 20px;
+    margin:10px;
     background-color: rebeccapurple;
+    font-size: 30px;
+    color: gold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-color: whitesmoke;
+    border-radius: 10px;
+    padding: 5px;
 }

@@ -3,12 +3,23 @@ body{
     background-image: url('../images/soccer-ronaldo.jpg');
     background-size: 100%;
     color: white;
+    font-family:Arial, Helvetica, sans-serif
+}
 
+.decor{
+    background-color: rgba(112, 112, 112, 0.8);
+    text-align: center;
 }
 
 h2{
     text-align: initial;
-    font-weight: bold;
+    font-weight:normal;
+    font-family:'Haettenschweiler';
+    font-size: 40px;
+    letter-spacing: 5px;
+    color: whitesmoke
+
+    
 }
 
 .say{
@@ -18,12 +29,17 @@ h2{
 h3{
     text-align: center;
     font-weight: bold;
+    font-family:Cambria;
+    
 }
 
 p{
     text-align: center;
     font-weight: bold;
     font-size: 20px;
+    font-family:Cambria;
+   
+    
 }
 
 .signup{
@@ -32,29 +48,155 @@ p{
 }
 
 .signupBtn{
-    margin: 20px;
+    margin: 10px;
     text-align: center;
-    font-size: 20px;
+    font-size: 40px;
+    padding: 5px;
     background-color:rebeccapurple;
     text-decoration: none;
+    border-radius: 10px;
+    border-color: white;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    
 }
 
 .loginBtn{
-    margin: 20px;
+    margin: 10px;
     text-align: center;
-    font-size: 20px;
+    font-size: 40px;
+    padding: 5px;
     background-color:rebeccapurple;
     text-decoration: none;
+    border-radius: 10px;
+    border-color: white;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
 }
 
 .viewButton{
+margin: 5px;
 font-size: 25px;
-margin-left: 100px;
-padding: 5px;
+text-align: center;
+padding: 10px;
 background-color:rebeccapurple;
 text-decoration: none;
+border-radius: 10px;
+border-color: white;
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
 }
 
 a:link{
     text-decoration: none;
+}
+
+
+
+/*tablet view*/
+@media all and (max-width: 1140px){
+
+    h2{
+        font-size: 30px;
+        color:gold;
+        letter-spacing: 2px;
+    }
+   h3{
+       font-size: 20px;
+   }
+   p{
+       font-size: 20px;
+   }
+
+   .signupBtn{
+    margin: 10px;
+    text-align: center;
+    font-size: 25px;
+    padding: 5px;
+    letter-spacing: 1px;
+}
+.loginBtn{
+    margin: 20px;
+    text-align: center;
+    font-size: 25px;
+    padding: 5px;
+    letter-spacing: 1px;
+}
+.viewButton{
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 1px;
+    }
+    
+  }
+
+  /* inbetween view */
+  @media all and (max-width: 625px){
+      
+    h2{
+        font-size: 28px;
+        color:gold;
+      
+    }
+    h3{
+        font-size: 18px;
+    }
+    p{
+        font-size: 18px;
+    }
+    .signupBtn{
+        margin: 10px;
+        text-align: center;
+        font-size: 20px;
+        padding: 5px;
+        letter-spacing: 1px;
+    }
+    .loginBtn{
+        margin: 10px;
+        text-align: center;
+        font-size: 20px;
+        padding: 5px;
+        letter-spacing: 1px;
+    }
+    .viewButton{
+        font-size: 20px;
+        text-align: center;
+        padding: 10px;
+       
+        }
+        
+  }
+  
+/*Mobile view*/
+@media all and (max-width: 500px){
+    h2{
+        font-size: 30px;
+        color:gold;
+        letter-spacing: 2.5px;
+    }
+   h3{
+       font-size: 17px;
+   }
+   p{
+       font-size: 17px;
+   }
+
+   .signupBtn{
+    margin: 10px;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+    letter-spacing: 1px;
+}
+.loginBtn{
+    margin: 10px;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+    letter-spacing: 1px;
+}
+.viewButton{
+    font-size: 17px;
+    padding: 10px;
+    letter-spacing: 1px;
+    }
+    
 }

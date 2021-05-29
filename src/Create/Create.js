@@ -44,10 +44,10 @@ function Create(props){
                 <label className='build' htmlFor='name'> Game name: </label>
                 <input type='text' name= 'name' id='name'/>
                 <br/>
-                <label className='build' htmlFor='maxplayers'> Max Players: </label>
+                <label className='build' htmlFor='maxplayers'> MaxPlayers: </label>
                 <input type='number' name= 'maxplayers' id='maxplayers'/>
                 <br/>
-                <label className='build' htmlFor='location'> Parks/Fields: </label>
+                <label className='build' htmlFor='location'> Park/Fields: </label>
                 <input type='text' name= 'location' id='location'/>
                 <br/>
                 <label className='build' htmlFor='date'> Date of Play: </label>

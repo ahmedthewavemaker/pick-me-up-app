@@ -4,12 +4,107 @@
 }
 
 .gameview{
-    display: flex;
+    display:flex ;
     flex-direction: row;
+   
 }
 
 .gametime{
  background-color: rgba(0, 0, 0, 0.8);
- margin: auto;
+ margin: 5px; 
  padding: 15px;
+ border-radius: 15px;
+
+      
+
 }
+
+.fonty{
+    font-size: 20px;
+    color: cyan;
+}
+
+.delBut{
+    align-content: flex-end;
+}
+
+
+
+/*tablet view*/
+@media all and (max-width: 1140px){
+    .gametime{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin:10px;
+       
+      
+    }
+
+    .fonty{
+        font-size: 17px;
+        color: skyblue;
+      
+    }
+
+    .delBut{
+        align-content: flex-end;
+    }
+    
+}
+
+/*in-between view*/
+@media all and (max-width: 734px){
+    .gameview{
+        display: inline;
+    }
+    .gametime{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+       justify-content: flex-start;
+       flex-wrap: wrap;
+       margin: 2px;
+       overflow:auto ;
+    }
+.fonty{
+    font-size: 15px;
+    color: cyan;
+    line-height: 2px;
+}
+   
+  
+}
+
+/*Mobile view*/
+@media all and (max-width: 500px){
+    .gameview{
+        display: inline;
+    }
+    .gametime{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+         flex-wrap: wrap;
+        border-radius: 15px;
+        margin: 2px;
+      
+    }
+
+    .fonty{
+        font-size: 13px;
+        color: gold;
+        line-height: 1px;
+     
+    }
+
+    .delBut{
+        align-content: flex-end;
+        margin: 4px 0;
+    }
+    
+}
+

@@ -44,7 +44,7 @@ function Signup(props) {
                 <label htmlFor='password'> Password: </label>
                 <input placeholder='password' type='text' name='password' id='password' />
                 <br/>
-                <label htmlFor='full_name'> Name: </label>
+                <label htmlFor='full_name'> Nickame: </label>
                 <input placeholder='name' type='text' name='full_name' id='full_name' />
                 <br/>
                 <label htmlFor='location'> Location: </label>

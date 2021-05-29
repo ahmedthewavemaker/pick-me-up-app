@@ -1,11 +1,69 @@
 h1{
-  font-size: 50px;
+  font-size: 60px;
   text-align: center;
   color: gold;
   list-style: none;
   font-style: italic;
+  font-family: fantasy;
+  letter-spacing: 7px;
+ 
 }
 
 a:visited{
   color: gold;
+ 
+}
+
+a:visited{
+  color:gold;
+ 
+}
+a:hover{
+  color: lawngreen;
+ 
+}
+a:active{
+  color: darkblue
+}
+
+/*Tablet View*/
+@media all and (max-width: 1140px){
+  h1{
+    font-size: 60px;
+    letter-spacing: 7px;
+    
+  }
+  
+  a:visited{
+    color:gold;
+   
+  }
+  a:hover{
+    color: lawngreen;
+   
+  }
+  a:active{
+    color: darkblue
+  }
+}
+
+/*Mobile view*/
+@media all and (max-width: 500px){
+  h1{
+    font-size: 45px;
+    letter-spacing: 5px;
+    
+  }
+  
+  a:visited{
+    color:gold;
+   
+  }
+  a:hover{
+    color: violet;
+   
+  }
+  a:active{
+    color: darkblue
+  }
 }

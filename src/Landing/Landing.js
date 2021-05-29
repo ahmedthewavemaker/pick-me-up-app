@@ -5,7 +5,7 @@ import './Landing.css'
 
 function Landing() {
     return(
-    <div>
+    <div className='decor'>
         
         <p>Ever go into the weekend and wish you knew who is playing where and if
              it would be a hassle to join a pick up game of soccer?<br />
