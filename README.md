@@ -8,7 +8,7 @@
 <img src="screenshots/landing.png">
 <img src="screenshots/login.png">
 <img src="screenshots/games.png">
-## Mobile-friendly version
+Mobile-friendly version
 <img src="screenshots/mobile.png">
 
 
