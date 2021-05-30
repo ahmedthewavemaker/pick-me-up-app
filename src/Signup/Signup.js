@@ -39,10 +39,10 @@ function Signup(props) {
             <form onSubmit={handleSubmit} className='forma'>
                 {error}
                 <label htmlFor='user_name'> Username: </label>
-                <input placeholder='funUsername' type='text' name='user_name' id='user_name' />
+                <input placeholder='Username' type='text' name='user_name' id='user_name' />
                 <br/>
                 <label htmlFor='password'> Password: </label>
-                <input placeholder='password' type='text' name='password' id='password' />
+                <input placeholder='password' type='password' name='password' id='password' />
                 <br/>
                 <label htmlFor='full_name'> Nickame: </label>
                 <input placeholder='name' type='text' name='full_name' id='full_name' />

@@ -31,10 +31,10 @@ function Login(props) {
           {error}
             <form onSubmit={handleSubmitJwtAuth} className='forma'>
                 <label htmlFor='user_name'> Username: </label>
-                <input placeholder='funUsername' type='text' name='user_name' id='user_name' />
+                <input placeholder='Username' type='text' name='user_name' id='user_name' />
                 <br/>
                 <label htmlFor='password'> Password: </label>
-                <input placeholder='password' type='text' name='password' id='password' />
+                <input placeholder='password' type='password' name='password' id='password' />
                 <br/>
                 <button className='button'> Submit </button>
                 </form>
