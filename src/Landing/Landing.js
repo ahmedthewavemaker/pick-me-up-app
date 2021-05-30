@@ -24,6 +24,7 @@ function Landing() {
 
         <button className= 'signupBtn'><Link to='/signup'> Sign up </Link>  </button>
         <button className= 'loginBtn'><Link to='/login'> Login </Link>  </button>
+        <button className= 'loginBtn'><Link to='/demo'> Demo </Link>  </button>
         </div>
 
     </div>

@@ -5,6 +5,7 @@ import Signup from './Signup/Signup'
 import Create from './Create/Create'
 import Games from './Games/Games'
 import Login from './Login/Login'
+import credentials from './credentials/credentials'
 import './App.css'
 
 
@@ -37,6 +38,11 @@ function App() {
         path = "/login"
         component={Login}
       />
+      <Route
+        path = "/demo"
+        component={credentials}
+      />
+
 
     </main>
   );
